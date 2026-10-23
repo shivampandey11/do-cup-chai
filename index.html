@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>दो Cup चाय हो जाए | A Cup of Happiness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#home" class="logo">
+            <img src="_logo2.png" alt="दो Cup चाय Logo">
+            <span>दो Cup चाय ☕</span>
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#ourmenu">Our Menu</a>
+            <a href="#contact">Contact</a>
+
+            <a href="#cart">Cart 🛒</a>
+            <a href="#reviews">Reviews ⭐</a>
+
+        </nav>
+    </header>
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Enjoy Your Happy Moment with <span>दो Cup चाय ☕</span></h1>
+            <p>Do cup Chai, Mood Ban Jaye!</p>
+            <a href="#ourmenu" class="btn">View Menu</a>
+        </div>
+    </section>
+
+
+    <section id="about" class="about section">
+        <h2>About <span>दो Cup चाय </span></h2>
+        <div class="about-content">
+            <img src="chai.jpg" alt="A delicious cup of chai">
+            <div>
+                <h3>Every Sip Brings Happiness</h3>
+                <p>
+                    Welcome to दो Cup चाय ! We serve delicious,
+                    refreshing chai made to bring people together.
+                    Enjoy your favourite tea and make every moment special.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="ourmenu" class="menu section">
+        <h2>Our <span>Menu</span></h2>
+
+        <div class="menu-container">
+            <div class="menu-card">
+                <img src="masala chai.jpg" width="149" alt="masala chai">
+                <h3>Masala Chai</h3>
+                <p>Traditional tea with aromatic spices.</p>
+                <h4>₹49</h4>
+
+                <div class="menu-buttons">
+                    <button class="btn" onclick="orderMasala()">
+                        Order Now
+                    </button>
+
+                    <button class="btn add-cart-btn" onclick="addToCart('Masala Chai', 30)">
+                        + Add 
+                    </button>
+                </div>
+
+
+
+            </div>
+
+            <div class="menu-card">
+                <img src="elachi chai.jpg" width="149" alt="elachi">
+                <h3>Elaichi Chai</h3>
+                <p>Refreshing tea with cardamom flavour.</p>
+                <h4>₹59</h4>
+
+                <div class="menu-buttons">
+                    <button class="btn" onclick="orderElaichi()">
+                        Order Now
+                    </button>
+
+                    <button class="btn add-cart-btn" onclick="addToCart('Elaichi chai', 30)">
+                        + Add 
+                    </button>
+                </div>
+
+
+            </div>
+
+            <div class="menu-card">
+                <img src="kulhad chai.jpg" width="149" alt="kulhad chai">
+                <h3>Kulhad Chai</h3>
+                <p>Enjoy the traditional taste of kulhad tea.</p>
+                <h4>₹79</h4>
+
+                <div class="menu-buttons">
+                    <button class="btn" onclick="orderkulhad()">
+                        Order Now
+                    </button>
+
+                    <button class="btn add-cart-btn" onclick="addToCart('kulhad chai', 30)">
+                        + Add 
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <button class="whatsapp-btn" onclick="orderOnWhatsApp()">
+    <span class="wa-icon">☏</span>
+    <span class="wa-text">
+        <strong>Order on WhatsApp</strong>
+        <small>Fresh chai is just a message away!</small>
+    </span>
+    <span class="wa-arrow">↗</span>
+</button>
+
+
+
+   <section id="reviews" class="section reviews">
+    <h2>What <span>People Say ⭐</span></h2>
+
+    <div class="reviews-container">
+
+        <div class="review-card">
+            <p class="stars">★★★★★</p>
+            <p>Masala Chai ka taste bahut achha hai!</p>
+        </div>
+
+        <div class="review-card">
+            <p class="stars">★★★★★</p>
+            <p>Kulhad Chai ka taste ekdum mast hai!</p>
+        </div>
+
+        <div class="review-card">
+            <p class="stars">★★★★☆</p>
+            <p>Chai aur website dono kaafi achhe hain!</p>
+        </div>
+
+    </div>
+</section>
+
+<form class="review-form reveal" id="reviewForm">
+        <h3>Write Your Review ✍️</h3>
+
+        <input type="text" id="reviewName"
+               placeholder="Your name" maxlength="40" required>
+
+        <select id="reviewRating" required>
+            <option value="5">★★★★★ - Excellent</option>
+            <option value="4">★★★★ - Very good</option>
+            <option value="3">★★★ - Good</option>
+            <option value="2">★★ - Okay</option>
+            <option value="1">★ - Needs improvement</option>
+        </select>
+
+        <textarea id="reviewText" rows="4" maxlength="300"
+                  placeholder="Write your experience..." required></textarea>
+
+        <button type="submit" class="btn">Submit Review</button>
+    </form>
+</section>
+
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have any questions? Contact us.</p>
+
+    <div class="contact-details">
+        <p>📍 <strong>Address:</strong> Hazaribagh, Jharkhand</p>
+        <p>📞 <strong>Phone:</strong> +91 7004603450</p>
+        <p>📧 <strong>Email:</strong> Docupchai22@gmail.com</p>
+    </div>
+</section>
+
+    <footer class="footer">
+        <p>© 2026 दो Cup चाय| All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function showPopup(message) {
+            document.getElementById("popupMessage").innerText = message;
+            document.getElementById("orderPopup").style.display = "flex";
+        }
+
+        function orderMasala() {
+            showPopup("Thank you for ordering Masala Chai! ☕");
+        }
+
+        function orderElaichi() {
+            showPopup("Thank you for ordering Elaichi Chai! ☕");
+        }
+
+        function orderKulhad() {
+            showPopup("Thank you for ordering Kulhad Chai! ☕");
+        }
+
+        function closePopup() {
+            document.getElementById("orderPopup").style.display = "none";
+        }
+
+
+
+
+        let cart = {};
+
+        function addToCart(name, price) {
+            if (cart[name]) {
+                cart[name].quantity++;
+            } else {
+                cart[name] = {
+                    price: price,
+                    quantity: 1
+                };
+            }
+
+            updateCart();
+            alert(name + " added to your cart! ☕");
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById("cartItems");
+            const cartTotal = document.getElementById("cartTotal");
+
+            let total = 0;
+            let html = "";
+
+            for (const name in cart) {
+                const item = cart[name];
+                const subtotal = item.price * item.quantity;
+
+                total += subtotal;
+
+                html += `
+            <div class="review-card">
+                <h3>${name}</h3>
+                <p>₹${item.price} × ${item.quantity}
+                   = ₹${subtotal}</p>
+
+                <button class="btn"
+                    onclick="changeQuantity('${name}', -1)">−</button>
+
+                <button class="btn"
+                    onclick="changeQuantity('${name}', 1)">+</button>
+
+                <button class="btn"
+                    onclick="removeFromCart('${name}')">Remove</button>
+            </div>
+        `;
+            }
+
+            cartItems.innerHTML = html ||
+                "<p>Your cart is empty. Add some chai!</p>";
+
+            cartTotal.textContent = total;
+        }
+
+        function changeQuantity(name, amount) {
+            if (!cart[name]) return;
+
+            cart[name].quantity += amount;
+
+            if (cart[name].quantity <= 0) {
+                delete cart[name];
+            }
+
+            updateCart();
+        }
+
+        function removeFromCart(name) {
+            delete cart[name];
+            updateCart();
+        }
+
+        function orderOnWhatsApp() {
+            const phone = "91XXXXXXXXXX";
+
+
+            const items = Object.entries(cart);
+
+            if (items.length === 0) {
+                alert("Bhai, pehle cart mein chai add karo! ☕");
+                return;
+            }
+
+            let total = 0;
+            let message = "Namaste Do Cup Chai! ☕\nMy Order:\n";
+
+            for (const [name, item] of items) {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+
+                message += name + " x " + item.quantity +
+                    " = Rs. " + subtotal + "\n";
+            }
+
+            message += "\nTotal Amount: Rs. " + total;
+
+            const url = "https://wa.me/" + phone +
+                "?text=" + encodeURIComponent(message);
+
+            window.open(url, "_blank");
+        }
+
+
+
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll(".reveal").forEach(section => {
+            observer.observe(section);
+        });
+
+    </script>
+
+
+    <div id="orderPopup" class="popup">
+        <div class="popup-content">
+            <h2>☕दो Cup चाय </h2>
+            <p id="popupMessage">Thank you!</p>
+            <button class="btn" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
