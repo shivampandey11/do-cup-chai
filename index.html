@@ -12,7 +12,7 @@
 
     <header class="header">
         <a href="#home" class="logo">
-            <img src="_logo2.png" alt="दो Cup चाय Logo">
+            <img src="./_logo2.png" alt="दो Cup चाय Logo">
             <span>दो Cup चाय ☕</span>
         </a>
 
@@ -172,6 +172,20 @@
 </section>
 
 
+<section id="cart" class="section">
+    <h2>Your Shopping Cart 🛒</h2>
+
+    <div id="cartItems">
+        <p>Your cart is empty. Add some chai!</p>
+    </div>
+
+    <h3>Total: ₹<span id="cartTotal">0</span></h3>
+
+    <button class="btn" onclick="orderOnWhatsApp()">
+        Checkout on WhatsApp
+    </button>
+</section>
+
 <section id="contact">
     <h2>Contact Us</h2>
     <p>Have any questions? Contact us.</p>
@@ -283,7 +297,7 @@
         }
 
         function orderOnWhatsApp() {
-            const phone = "91XXXXXXXXXX";
+            const phone = "917004603450";
 
 
             const items = Object.entries(cart);
