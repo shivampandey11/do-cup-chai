@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.header {
+    background: #A0522D;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+
+
+
+.menu {
+    background: #f5e6d3;
+    padding: 20px;
+}
+
+.menu h3 {
+    color: #6F4E37;
+}
+
+.menu a {
+    display: block;
+    color: #d3b097;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 5px;
+}
+
+.menu a:hover {
+    background: #A0522D;
+    color: white;
+}
+
+
+
+
+.home {
+    
+    min-height: 100vh;
+
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-align: center;
+    padding-top: 100px;
+}
+
+.home h2 {
+    color: white;
+}
+
+.home p {
+    color: white;
+}
+    
+
+button {
+    background: #A0522D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+button:hover{
+ 
+    background-color: #6F4E37;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+.About {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.about-text {
+    width: 60%;
+    text-align: left;
+}
+
+.about-text h3 {
+    color: #6F4E37;
+    font-size: 30px;
+}
+
+.about-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+#ourmenu {
+    text-align: center;
+    padding: 40px;
+    background-color: lightpink;
+    border: 2px solid #FFB6C1;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.menu-container {
+    
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.menu-card {
+    
+    background-color: white;
+    width: 170px;
+    padding: 20px;
+    padding-bottom: 60px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.menu-card h3 {
+    color: #6F4E37;
+}
+
+
+
+.contact {
+    background-color: lightgray;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 70px;
+    text-align: left;
+    padding: 40px;
+}
+
+
+
+
+.footer {
+    background: #6F4E37;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
